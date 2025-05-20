@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Assignment 3</title> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/static/css/style.css">
+    </head>
+    <body id="body">
+        <div class="center">
+            <div>
+                <div class="header1">
+                    <div class="sub">
+                        <h1 class="theme-text">Guessing Game</h1>
+                    </div>
+                    <div class="sub">
+                        <button class="theme" onclick="toggleTheme()">Toggle theme</button>
+                    </div>
+                </div>
+        
+                <div id="difficulty-select">
+                    <div>
+                        <button onclick="select(3)">Easy</button>
+                        <button onclick="select(6)">Medium</button>
+                        <button onclick="select(12)">Hard</button>
+                    </div>
+                    <p class="theme-text">Power UP:</p>
+                    <p class="theme-text">Guess 2 pairs in a row to gain 5 seconds!</p>
+                </div>
+        
+                <div id="game" style="display: none;">
+                    <template id="card-template">
+                        <div class="card">
+                            <input hidden value="unlocked" class="status">
+                            <img src="" class="front_face">
+                            <img src="/static/images/back.webp" class="back_face">
+                        </div>
+                    </template>
+    
+                    <div class="game-header-wrapper">
+                        <div class="game-header">
+                            <div class="header1">
+                                <div class="sub">
+                                    <button onclick="reset()">Reset</button>
+                                </div>
+                                <div class="sub">
+                                    <div id="message-box" class="message-box">
+                                        <h3 id="message"></h3>
+                                    </div>
+                                </div>
+                                <div class="sub">
+                                    <h1 id="timer"></h1>
+                                </div>
+                            </div>
+                            <div class="header1">
+                                <div>
+                                    <h3>Clicks:</h3>
+                                    <h3 id="clicks">0</h3>
+                                </div>
+                                <div>
+                                    <h3>Matched:</h3>
+                                    <h3 id="matched">0</h3>
+                                </div>
+                                <div>
+                                    <h3>Remaining:</h3>
+                                    <h3 id="remaining">0</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div id="cards">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="/static/scripts/script.js"></script>
+</html>
